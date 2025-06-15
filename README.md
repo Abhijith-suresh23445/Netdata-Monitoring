@@ -39,16 +39,17 @@ This project demonstrates how to install and configure Netdata on an AWS EC2 ins
 
    * http://<your-ec2-public-ip>:19999
 
- 🔐 Security Best Practices
-Don't leave port 19999 open to the whole internet forever. After testing, choose one of the following:
-
-✅ Option 1: Restrict access in your Security Group to your own IP address only.
-
-✅ Option 2: Close port 19999 and use an NGINX reverse proxy with basic authentication for secure access.
-
 6. Stopping Netdata to Avoid Charges
    
    If you're done testing and want to stop Netdata:
 
    sudo systemctl stop netdata
    And stop the EC2 instance from AWS Console.
+
+   
+🔐 Security Best Practices
+Don't leave port 19999 open to the whole internet forever. After testing, choose one of the following:
+
+✅ Option 1: Restrict access in your Security Group to your own IP address only.
+
+✅ Option 2: Close port 19999 and use an NGINX reverse proxy with basic authentication for secure access.
